@@ -1,70 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MemeMind</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 40px 20px;
-      background-color: #fdfdfd;
-      color: #333;
-      line-height: 1.6;
-    }
-    h1 {
-      font-size: 2.5em;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
-    }
-    h2 {
-      margin-top: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-    }
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    strong {
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeMind Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-  <h1>MemeMind</h1>
-  <p>
-    This is a project that introduces a harmful meme dataset, which for the first time adds CoT annotation to enable the model to mimic human thinking to infer whether memes are harmful.
-  </p>
+    <div class="container">
+        <!-- Header -->
+        <h1>MemeMind: A Large-Scale Multimodal Dataset with Chain-of-Thought Reasoning for Harmful Meme Detection</h1>
+        <p><strong>Authors:</strong> [To be filled in]</p>
 
-  <h2>Paper</h2>
-  <p>
-    This work is introduced in our paper: <strong>MemeMind: A Large-Scale Multimodal Dataset with Chain-of-Thought Reasoning for Harmful Meme Detection</strong>.
-    <br><em>(Coming soon on arXiv)</em>
-  </p>
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="button">Download</button>
+            <button class="button">Supplementary</button>
+            <button class="button">Code</button>
+            <button class="button">Paper</button>
+        </div>
 
-  <h2>Dataset</h2>
-  <p>
-    You can view and download our dataset MemeMind through this link:<br>
-    <a href="https://huggingface.co/datasets/yubb66/MemeMind" target="_blank">
-      https://huggingface.co/datasets/yubb66/MemeMind
-    </a>.
-    <br>This includes all harmful meme samples and annotation files in the dataset, divided into training and testing sets.
-  </p>
+        <!-- Sections -->
+        <h2>Paper</h2>
+        <p>This work is introduced in our paper: <strong>MemeMind: A Large-Scale Multimodal Dataset with Chain-of-Thought Reasoning for Harmful Meme Detection</strong>.</p>
 
-  <h2>Supplementary Material</h2>
-  <p>
-    The supplementary materials for our paper have been provided in detail in the <strong>Supplementary</strong> folder, including reference, appendices, annotated visualization examples of the dataset, and visualization examples of the output results of our method model.
-  </p>
+        <h2>Dataset</h2>
+        <p>You can view and download our dataset MemeMind through this link: <a href="https://huggingface.co/datasets/yubb66/MemeMind">https://huggingface.co/datasets/yubb66/MemeMind</a>.  This includes all harmful meme samples and annotation files in the dataset, divided into training and testing sets.</p>
 
-  <h2>Codes</h2>
-  <p>
-    The relevant code for our method will be <strong>open sourced soon</strong> after we have organized it.
-  </p>
+        <h2>Supplementary Material</h2>
+        <p>The supplementary materials for our paper have been provided in detail in the Supplementary folder, including <strong>reference</strong>, <strong>appendices</strong>, <strong>annotated visualization examples of the dataset</strong>, and <strong>visualization examples of the output results of our method model</strong>.</p>
+
+        <h2>Codes</h2>
+        <p>The relevant code for our method will be <strong>open sourced soon</strong> after we have organized it.</p>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="https://via.placeholder.com/800x400?text=MemeMind+Dataset+Visualization" alt="MemeMind Dataset Visualization">
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2023 MemeMind Project. All rights reserved.</p>
+        </div>
+    </div>
 </body>
 </html>
