@@ -33,11 +33,18 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        .buttons {
+        .authors {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .author {
+            text-align: center;
+            width: 30%;
+        }
+        .author span {
+            font-weight: bold;
         }
         .button {
             padding: 10px 20px;
@@ -70,7 +77,46 @@
     <div class="container">
         <!-- Header -->
         <h1>MemeMind: A Large-Scale Multimodal Dataset with Chain-of-Thought Reasoning for Harmful Meme Detection</h1>
-        <p><strong>Authors:</strong> [To be filled in]</p>
+
+        <!-- Authors -->
+        <div class="authors">
+            <div class="author">
+                <span>Hexiang Gu<sup>*</sup></span><br>
+                <a href="mailto:guhexiang@bupt.edu.cn">guhexiang@bupt.edu.cn</a><br>
+                Beijing University of Posts and Telecommunications<br>
+                Beijing, China
+            </div>
+            <div class="author">
+                <span>Qifan Yu<sup>*</sup></span><br>
+                <a href="mailto:yqf666@bupt.edu.cn">yqf666@bupt.edu.cn</a><br>
+                Beijing University of Posts and Telecommunications<br>
+                Beijing, China
+            </div>
+            <div class="author">
+                <span>Saihui Hou<sup>†</sup></span><br>
+                <a href="mailto:housaihui@bnu.edu.cn">housaihui@bnu.edu.cn</a><br>
+                Beijing Normal University<br>
+                Beijing, China
+            </div>
+            <div class="author">
+                <span>Zhiqin Fang</span><br>
+                <a href="mailto:2021213285@bupt.cn">2021213285@bupt.cn</a><br>
+                Beijing University of Posts and Telecommunications<br>
+                Beijing, China
+            </div>
+            <div class="author">
+                <span>Huijia Wu<sup>‡</sup></span><br>
+                <a href="mailto:wuhuijia@bupt.edu.cn">wuhuijia@bupt.edu.cn</a><br>
+                Beijing University of Posts and Telecommunications<br>
+                Beijing, China
+            </div>
+            <div class="author">
+                <span>Zhaofeng He</span><br>
+                <a href="mailto:zhaofenghe@bupt.edu.cn">zhaofenghe@bupt.edu.cn</a><br>
+                Beijing University of Posts and Telecommunications<br>
+                Beijing, China
+            </div>
+        </div>
 
         <!-- Buttons -->
         <div class="buttons">
