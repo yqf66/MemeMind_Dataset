@@ -1,153 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemeMind Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .authors {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            margin-top: 20px;
-        }
-        .author {
-            text-align: center;
-            width: 30%;
-        }
-        .author span {
-            font-weight: bold;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #555;
-        }
-        .image-container {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MemeMind</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #666;
+    }
+    .authors, .affiliations, .notes {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .button-group {
+      margin-bottom: 30px;
+    }
+    .button {
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .abstract {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .abstract-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <h1>MemeMind: A Large-Scale Multimodal Dataset with Chain-of-Thought Reasoning for Harmful Meme Detection</h1>
-
-        <!-- Authors -->
-        <div class="authors">
-            <div class="author">
-                <span>Hexiang Gu<sup>*</sup></span><br>
-                <a href="mailto:guhexiang@bupt.edu.cn">guhexiang@bupt.edu.cn</a><br>
-                Beijing University of Posts and Telecommunications<br>
-                Beijing, China
-            </div>
-            <div class="author">
-                <span>Qifan Yu<sup>*</sup></span><br>
-                <a href="mailto:yqf666@bupt.edu.cn">yqf666@bupt.edu.cn</a><br>
-                Beijing University of Posts and Telecommunications<br>
-                Beijing, China
-            </div>
-            <div class="author">
-                <span>Saihui Hou<sup>†</sup></span><br>
-                <a href="mailto:housaihui@bnu.edu.cn">housaihui@bnu.edu.cn</a><br>
-                Beijing Normal University<br>
-                Beijing, China
-            </div>
-            <div class="author">
-                <span>Zhiqin Fang</span><br>
-                <a href="mailto:2021213285@bupt.cn">2021213285@bupt.cn</a><br>
-                Beijing University of Posts and Telecommunications<br>
-                Beijing, China
-            </div>
-            <div class="author">
-                <span>Huijia Wu<sup>‡</sup></span><br>
-                <a href="mailto:wuhuijia@bupt.edu.cn">wuhuijia@bupt.edu.cn</a><br>
-                Beijing University of Posts and Telecommunications<br>
-                Beijing, China
-            </div>
-            <div class="author">
-                <span>Zhaofeng He</span><br>
-                <a href="mailto:zhaofenghe@bupt.edu.cn">zhaofenghe@bupt.edu.cn</a><br>
-                Beijing University of Posts and Telecommunications<br>
-                Beijing, China
-            </div>
-        </div>
-
-        <!-- Buttons -->
-        <div class="buttons">
-            <button class="button">Download</button>
-            <button class="button">Supplementary</button>
-            <button class="button">Code</button>
-            <button class="button">Paper</button>
-        </div>
-
-        <!-- Sections -->
-        <h2>Paper</h2>
-        <p>This work is introduced in our paper: <strong>MemeMind: A Large-Scale Multimodal Dataset with Chain-of-Thought Reasoning for Harmful Meme Detection</strong>.</p>
-
-        <h2>Dataset</h2>
-        <p>You can view and download our dataset MemeMind through this link: <a href="https://huggingface.co/datasets/yubb66/MemeMind">https://huggingface.co/datasets/yubb66/MemeMind</a>.  This includes all harmful meme samples and annotation files in the dataset, divided into training and testing sets.</p>
-
-        <h2>Supplementary Material</h2>
-        <p>The supplementary materials for our paper have been provided in detail in the Supplementary folder, including <strong>reference</strong>, <strong>appendices</strong>, <strong>annotated visualization examples of the dataset</strong>, and <strong>visualization examples of the output results of our method model</strong>.</p>
-
-        <h2>Codes</h2>
-        <p>The relevant code for our method will be <strong>open sourced soon</strong> after we have organized it.</p>
-
-        <!-- Image Section -->
-        <div class="image-container">
-            <img src="https://via.placeholder.com/800x400?text=MemeMind+Dataset+Visualization" alt="MemeMind Dataset Visualization">
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>&copy; 2023 MemeMind Project. All rights reserved.</p>
-        </div>
-    </div>
+  <h1>MemeMind: A Large-Scale Multimodal Dataset with Chain-of-Thought Reasoning for Harmful Meme Detection</h1>
+  <div class="authors">
+    Hexiang Gu*, Qifan Yu*, Saihui Hou#, Zhiqin Fang, Huijia Wu*, Zhaofeng He
+  </div>
+  <div class="notes">
+    * Indicates Equal Contribution, # Representing the corresponding author
+  </div>
+  <div class="affiliations">
+    Beijing University of Posts and Telecommunications, Beijing Normal University
+  </div>
+  <div class="button-group">
+    <a href="#" class="button">Dataset</a>
+    <a href="#" class="button">Supplementary</a>
+    <a href="#" class="button">Code</a>
+    <a href="#" class="button">Paper</a>
+  </div>
+  <div class="abstract">
+    <div class="abstract-title">Abstract</div>
+    <p>
+      The rapid development of social media has intensified the spread of harmful content. Harmful memes, which integrate both images and text, pose significant challenges for automated detection due to their implicit semantics and complex multimodal interactions. Although existing research has made progress in detection accuracy and interpretability, the lack of a systematic, large-scale, diverse, and highly explainable dataset continues to hinder further advancement in this field.
+    </p>
+    <p>
+      To address this gap, we introduce MemeMind, a novel dataset featuring scientifically rigorous standards, large scale, diversity, bilingual support (Chinese and English), and detailed Chain-of-Thought (CoT) annotations. MemeMind fills critical gaps in current datasets by offering comprehensive labeling and explicit reasoning traces, thereby providing a solid foundation for enhancing harmful meme detection.
+    </p>
+    <p>
+      In addition, we propose an innovative detection framework, MemeGuard, which effectively integrates multimodal information with reasoning process modeling, significantly improving models' ability to understand and identify harmful memes. Extensive experiments conducted on the MemeMind dataset demonstrate that MemeGuard consistently outperforms existing state-of-the-art methods in harmful meme detection tasks.
+    </p>
+  </div>
 </body>
 </html>
